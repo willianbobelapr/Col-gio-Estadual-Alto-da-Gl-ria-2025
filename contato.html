@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Colégio Estadual Alto da Glória</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Colégio Estadual Alto da Glória</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="jornal.html">Jornal Informativo</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contato-info">
+            <h2>Informações de Contato</h2>
+            <div class="info-card">
+                <h3>Endereço</h3>
+                <p>Rua José Joaquim Bhalls, 1235</p>
+                <p>Bairro Alto da Glória</p>
+                <p>Palmas - Paraná</p>
+            </div>
+            <div class="info-card">
+                <h3>Telefones</h3>
+                <p>Secretaria: (46) 3263-5905</p>
+                <p>Direção: (46) 9 9941-5640</p>
+            </div>
+            <div class="info-card">
+                <h3>E-mail</h3>
+                <p>pmpaltodagloria@seed.gov.br</p>
+            </div>
+            <div class="info-card">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 7h às 17h</p>
+            </div>
+        </section>
+
+        <section class="contato-form">
+            <h2>Entre em Contato</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                </div>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Colégio Estadual Alto da Glória. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
