@@ -604,4 +604,36 @@ footer {
         right: 15px;
         font-size: 30px;
     }
+}
+
+/* Estilos para vídeo */
+.video-container {
+    text-align: center;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.video-container video {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.video-container video:hover {
+    transform: scale(1.02);
+}
+
+/* Responsividade para vídeo */
+@media (max-width: 768px) {
+    .video-container {
+        padding: 0.5rem;
+    }
+    
+    .video-container video {
+        width: 100% !important;
+        max-width: none !important;
+    }
 } 
