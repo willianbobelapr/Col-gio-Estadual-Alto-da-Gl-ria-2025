@@ -58,4 +58,83 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         observer.observe(card);
     });
+});
+
+// Carrossel de Imagens
+let currentImageIndex = 0;
+const images = [
+    'img/cafecomdiretores/WhatsApp Image 2025-06-18 at 08.29.20.jpeg',
+    'img/cafecomdiretores/WhatsApp Image 2025-06-18 at 08.29.20 (1).jpeg',
+    'img/cafecomdiretores/WhatsApp Image 2025-06-18 at 08.29.21.jpeg',
+    'img/cafecomdiretores/WhatsApp Image 2025-06-18 at 08.29.21 (1).jpeg'
+];
+
+function openModal(imageIndex) {
+    currentImageIndex = imageIndex;
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const imageNumber = document.getElementById('imageNumber');
+    
+    modal.style.display = 'block';
+    modalImage.src = images[currentImageIndex];
+    modalImage.alt = 'Café com Diretor - Equipe Pedagógica CEAG';
+    imageNumber.textContent = currentImageIndex + 1;
+    
+    // Previne o scroll da página quando o modal está aberto
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+    
+    // Restaura o scroll da página
+    document.body.style.overflow = 'auto';
+}
+
+function changeImage(direction) {
+    currentImageIndex += direction;
+    
+    // Loop das imagens
+    if (currentImageIndex >= images.length) {
+        currentImageIndex = 0;
+    } else if (currentImageIndex < 0) {
+        currentImageIndex = images.length - 1;
+    }
+    
+    const modalImage = document.getElementById('modalImage');
+    const imageNumber = document.getElementById('imageNumber');
+    
+    modalImage.src = images[currentImageIndex];
+    imageNumber.textContent = currentImageIndex + 1;
+}
+
+// Fechar modal clicando fora da imagem
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
+});
+
+// Navegação por teclado
+document.addEventListener('keydown', function(e) {
+    const modal = document.getElementById('imageModal');
+    if (modal && modal.style.display === 'block') {
+        switch(e.key) {
+            case 'Escape':
+                closeModal();
+                break;
+            case 'ArrowLeft':
+                changeImage(-1);
+                break;
+            case 'ArrowRight':
+                changeImage(1);
+                break;
+        }
+    }
 }); 

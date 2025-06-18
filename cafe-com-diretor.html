@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café com Diretor - Colégio Estadual Alto da Glória</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Colégio Estadual Alto da Glória</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="jornal.html">Jornal Informativo</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="evento-destaque">
+            <div class="evento-content">
+                <h2>Café com Diretor</h2>
+                <div class="evento-info">
+                    <p class="data">📅 Maio de 2025</p>
+                    <br>
+                    <p class="local">📍 Colégio Estadual Alto da Glória</p>
+                </div>
+                
+                <p class="descricao">
+                    No mês 5 de 2025, o Café com Diretor teve um grande número de alunos participantes. 
+                    O programa é um sucesso regional e começou aqui em Palmas PR.
+                </p>
+                
+                <p class="descricao">
+                    O Café com Diretor tem como intuito aumentar o índice de presença na escola. 
+                    Os alunos que tiverem 100% de presença são convidados para um banquete repleto de guloseimas e frutas.
+                </p>
+
+                <div class="galeria-fotos">
+                    <h3>Galeria de Fotos - Equipe Pedagógica CEAG</h3>
+                    <div class="fotos-grid">
+                        <img src="img/cafecomdiretores/WhatsApp Image 2025-06-18 at 08.29.20.jpeg" alt="Café com Diretor - Equipe Pedagógica CEAG" class="foto-evento" onclick="openModal(0)">
+                        <img src="img/cafecomdiretores/WhatsApp Image 2025-06-18 at 08.29.20 (1).jpeg" alt="Café com Diretor - Equipe Pedagógica CEAG" class="foto-evento" onclick="openModal(1)">
+                        <img src="img/cafecomdiretores/WhatsApp Image 2025-06-18 at 08.29.21.jpeg" alt="Café com Diretor - Equipe Pedagógica CEAG" class="foto-evento" onclick="openModal(2)">
+                        <img src="img/cafecomdiretores/WhatsApp Image 2025-06-18 at 08.29.21 (1).jpeg" alt="Café com Diretor - Equipe Pedagógica CEAG" class="foto-evento" onclick="openModal(3)">
+                    </div>
+                </div>
+
+                <!-- Modal do Carrossel -->
+                <div id="imageModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+                        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                        <img id="modalImage" class="modal-image" src="" alt="">
+                        <button class="next" onclick="changeImage(1)">&#10095;</button>
+                        <div class="image-counter">
+                            <span id="imageNumber">1</span> / <span id="totalImages">4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destaque">
+                    <h3>🎯 Objetivo do Programa</h3>
+                    <p>Aumentar o índice de presença escolar através de incentivos positivos</p>
+                </div>
+
+                <div class="destaque">
+                    <h3>🏆 Como Participar</h3>
+                    <p>Mantenha 100% de presença nas aulas e seja convidado para o próximo banquete!</p>
+                </div>
+
+                <a href="jornal.html" class="evento-button">Voltar ao Jornal</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Colégio Estadual Alto da Glória. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
